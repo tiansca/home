@@ -312,4 +312,24 @@
     }
   }
 
+  // 移动端页面被输入键盘挤压的问题
+  var viewWidth = window.innerWidth; //获取可视区域宽度
+  var viewHeight = window.innerHeight; //获取可视区域高度
+  if (viewWidth > viewHeight) {
+    horizontalScreen = true; // 横屏 判断横竖屏，需要的时候用
+  } else {
+    horizontalScreen = false; // 竖屏
+  }
+  const input = document.querySelector('#searchInput')
+  const body = document.querySelector('body')
+  const footer = document.querySelector('.footer')
+  input.addEventListener('focus', function () {
+    console.log('聚焦')
+    body.style.height = viewHeight + 'px'
+    footer.style.visibility = 'hidden'
+  })
+  input.addEventListener('blur', function () {
+    footer.style.visibility = 'visible'
+  })
+
 </script>
