@@ -30,7 +30,8 @@
     .container{
         width: 800px;
         background-color: rgba(255, 255, 255, 0.4);
-        height: 65%;
+        /*height: 65%;*/
+        height: 53%;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
@@ -46,7 +47,8 @@
         /*background-color: rgba(51, 81, 92, 0.6);*/
         background-color: #fff;
         border: 1px solid rgba(51, 81, 92, 0.6);;
-        height: 22%;
+        /*height: 22%;*/
+        height: 28%;
         width: 30%;
         cursor: pointer;
         border-radius: 6px;
@@ -99,8 +101,9 @@
         justify-content: center;
         align-items: center;
         position: fixed;
-        bottom:  20px;
+        bottom:  8px;
         color: #fff;
+        flex-direction: column;
     }
     .foot-item{
         padding: 0 8px;
@@ -136,6 +139,18 @@
     .foot-item>.hover-img>img{
         width: 100%;
         height: 100%;
+    }
+    .foot-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .beian{
+        color: #fff;
+    }
+    .beian:hover{
+        color: #409eff;
+        text-decoration: underline;
     }
     input[type=search] {
         -webkit-appearance: textfield;
@@ -176,7 +191,8 @@
             width: calc(90% - 32px);
             padding: 16px;
             margin-top: 30px;
-            max-height: 450px;
+            /*max-height: 450px;*/
+            max-height: 410px;
         }
         .block-item .icon{
             width: 45px;
@@ -198,7 +214,7 @@
 <body>
     <div class="header">
       <h2>欢迎来到聪的小站</h2>
-      <a class="login hide" href="//user.tiansc.top/#/login?from=https://tiansc.top">登录</a>
+      <a class="login hide" href="//gate.tiansc.top/#/login?redirect=https://tiansc.top">登录</a>
       <div class="user hide"></div>
     </div>
     <div class="search-box">
@@ -237,12 +253,18 @@
           <span>智能对话</span>
         </a>
       </div>
-      <div class="block-item">
-        <a href="https://tiansc.top/memo" target="_blank">
-          <img class="icon" src="assets/img/memo.png" alt="">
-          <span>定时邮件</span>
+<!--      <div class="block-item">-->
+<!--        <a href="https://tiansc.top/memo" target="_blank">-->
+<!--          <img class="icon" src="assets/img/memo.png" alt="">-->
+<!--          <span>定时邮件</span>-->
+<!--        </a>-->
+<!--      </div>-->
+    <div class="block-item">
+        <a href="https://compress.tiansc.top" target="_blank">
+            <img class="icon" src="assets/img/compress.png" alt="">
+            <span>图片压缩</span>
         </a>
-      </div>
+    </div>
       <div class="block-item">
         <a href="https://tiansc.top/screencast" target="_blank">
           <img class="icon" src="assets/img/screen.png" alt="">
@@ -261,66 +283,80 @@
           <span>短链接</span>
         </a>
       </div>
-      <div class="block-item">
-        <a href="https://compress.tiansc.top" target="_blank">
-          <img class="icon" src="assets/img/compress.png" alt="">
-          <span>图片压缩</span>
-        </a>
-      </div>
-      <div class="block-item">
-        <a href="https://tiansc.top/wxlogin/#/doc" target="_blank">
-          <img class="icon" src="assets/img/wchat.png" alt="">
-          <span>微信扫码登录</span>
-        </a>
-      </div>
-      <div class="block-item">
-        <a href="https://gitee.com/tian_shicong/icon-web" target="_blank">
-          <img class="icon" src="assets/img/icon.png" alt="">
-          <span>图标管理库</span>
-        </a>
-      </div>
+
+<!--      <div class="block-item">-->
+<!--        <a href="https://tiansc.top/wxlogin/#/doc" target="_blank">-->
+<!--          <img class="icon" src="assets/img/wchat.png" alt="">-->
+<!--          <span>微信扫码登录</span>-->
+<!--        </a>-->
+<!--      </div>-->
+<!--      <div class="block-item">-->
+<!--        <a href="https://gitee.com/tian_shicong/icon-web" target="_blank">-->
+<!--          <img class="icon" src="assets/img/icon.png" alt="">-->
+<!--          <span>图标管理库</span>-->
+<!--        </a>-->
+<!--      </div>-->
+<!--        <div class="block-item">-->
+<!--            <a href="https://tiansc.top/wxlogin/#/doc" target="_blank">-->
+<!--                <img class="icon" src="assets/img/wchat.png" alt="">-->
+<!--                <span>项目自动部署</span>-->
+<!--            </a>-->
+<!--        </div>-->
     </div>
     <div class="footer">
-      <div class="foot-item">
-        <span>
-          <img src="assets/img/icon_chat.png" alt="">
-          微信
-        </span>
-        <div class="hover-img">
-          <img src="http://img-1255740208.cossh.myqcloud.com/tiansc/图片/icon/mmqrcode1630916768215.png" alt="">
+        <div class="foot-container">
+            <div class="foot-item">
+                <span>
+                  <img src="assets/img/icon_chat.png" alt="">
+                  微信
+                </span>
+                <div class="hover-img">
+                    <img src="http://img-1255740208.cossh.myqcloud.com/tiansc/图片/icon/mmqrcode1630916768215.png" alt="">
+                </div>
+            </div>
+                    <!--<a class="foot-item" href="https://weibo.com/u/5462040398?is_all=1" target="_blank">
+                      <span>
+                        <img src="assets/img/icon_blog.png" alt="">
+                        微博
+                      </span>
+                    </a>-->
+            <a class="foot-item" href="https://www.zhihu.com/people/xiang-si-ji-hong-dou-62" target="_blank">
+                <span>
+                  <img src="assets/img/icon_zhihu.png" alt="">
+                  知乎
+                </span>
+            </a>
+            <a class="foot-item" target="_blank" href="tel:15613152065">
+                <span>
+                  <img src="assets/img/icon_phone.png" alt="">
+                  电话
+                </span>
+            </a>
+            <a class="foot-item" target="_blank" href="mailto:tian_shicong@163.com">
+                <span>
+                  <img src="assets/img/icon_mail.png" alt="">
+                  邮箱
+                </span>
+            </a>
+            <a class="foot-item" target="_blank" href="" style="display: none">
+                <span>
+                  <img src="assets/img/icon_resume.png" alt="">
+                  简历
+                </span>
+            </a>
         </div>
-      </div>
-      <!--<a class="foot-item" href="https://weibo.com/u/5462040398?is_all=1" target="_blank">
-        <span>
-          <img src="assets/img/icon_blog.png" alt="">
-          微博
-        </span>
-      </a>-->
-      <a class="foot-item" href="https://www.zhihu.com/people/xiang-si-ji-hong-dou-62" target="_blank">
-        <span>
-          <img src="assets/img/icon_zhihu.png" alt="">
-          知乎
-        </span>
-      </a>
-      <a class="foot-item" target="_blank" href="tel:15613152065">
-        <span>
-          <img src="assets/img/icon_phone.png" alt="">
-          电话
-        </span>
-      </a>
-      <a class="foot-item" target="_blank" href="mailto:tian_shicong@163.com">
-        <span>
-          <img src="assets/img/icon_mail.png" alt="">
-          邮箱
-        </span>
-      </a>
-      <a class="foot-item" target="_blank" href="" style="display: none">
-        <span>
-          <img src="assets/img/icon_resume.png" alt="">
-          简历
-        </span>
-      </a>
+        <div style="margin: 8px auto 0;">
+            <p style="margin: 0; font-size: 14px;">
+                <a class="beian" href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                    京ICP备2021026333号-1
+                </a>
+            </p>
+            <!-- 其他底部内容可以放在这里 -->
+        </div>
     </div>
+<!--    <footer style="background-color: #222; color: white; padding: 16px 0; text-align: center;">-->
+
+<!--    </footer>-->
 </body>
 </html>
 <script src="assets/js/ajax.js"></script>
@@ -328,14 +364,14 @@
   async function checkUser() {
     try {
       const res = await httpRequest({
-        httpUrl: '//api.tiansc.top/api/self',
+        httpUrl: '//auth.tiansc.top/user/checkToken',
         type: 'get'
       })
       console.log(res)
       // 隐藏登录按钮
       if (res.code === 0) {
         document.querySelector('.login').classList.add('hide')
-        document.querySelector('.user').innerText = `你好，${res.data.name}`
+        document.querySelector('.user').innerText = `你好，${res.data.username}`
         document.querySelector('.user').classList.remove('hide')
       }
     } catch (e) {
@@ -376,6 +412,13 @@
   input.addEventListener('blur', function () {
     footer.style.visibility = 'visible'
   })
-
+  window.onload = function () {
+    // 如果search中有token参数，删除
+    // 获取url中的search参数
+    var search = window.location.search;
+    if (search && search.indexOf('token') > -1) {
+      location.replace(location.origin + location.pathname)
+    }
+  }
 </script>
 <script src='https://api.vvhan.com/api/snow'></script>
